@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: 0 0% 4%;
+  --surface: 0 0% 7%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 72%;
+  --border: 0 0% 12%;
+  --accent: 160 100% 50%;
+  --accent-secondary: 188 89% 64%;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: 0 0% 4%;
+  --surface: 0 0% 7%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 72%;
+  --border: 0 0% 12%;
+  --accent: 160 100% 50%;
+  --accent-secondary: 188 89% 64%;
+}
+
+.light {
+  color-scheme: light;
+  --bg: 0 0% 100%;
+  --surface: 0 0% 97%;
+  --text: 0 0% 10%;
+  --muted: 0 0% 42%;
+  --border: 0 0% 87%;
+  --accent: 160 100% 36%;
+  --accent-secondary: 188 75% 45%;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  @apply bg-bg text-text antialiased scroll-smooth;
+  min-height: 100vh;
+}
+
+/* Custom Highlight for your "Senior" Branding */
+::selection {
+  @apply bg-accent/30 text-accent;
+}
+
+/* Glassmorphism Effect for your Project Cards */
+.glass {
+  @apply bg-surface/60 backdrop-blur-md border border-border;
+}
+
+a {
+  @apply transition-all duration-300;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10;
+}
+
+.bento-card {
+  @apply rounded-2xl border border-border bg-surface shadow-[0_10px_30px_rgba(0,0,0,0.18)];
+}
